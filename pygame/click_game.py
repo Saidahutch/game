@@ -14,14 +14,16 @@ def update():
         character.right = 0
 def on_mouse_down(pos):
     if character.collidepoint(pos):
+        print('sound2')
         sounds.eep.play()
         character.image = 'character_clicked'
+    if character.image == 'character_clicked':
+        print('sound')
+        sounds.eep.play()
 
-def on_mouse_down(pos):
-    if character.image = 'character_clicked'
-    sounds.eep.play()
 
 def set_character_clicked():
+
     character.image = 'character_clicked'
     sounds.eep.play()
     clocks.schedule_unique(set_character_normal,1.0)
